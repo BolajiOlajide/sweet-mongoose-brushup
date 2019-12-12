@@ -12,11 +12,11 @@ Array
 Decimal128
 Map
  */
-const mongoose = require('mongoose');
+const mongoose = require('../db');
 const { Schema } = mongoose;
 
 const characterSchema = new Schema({
-  name: String,
+  name: { type: String, unique: true },
   ultimate: String
 });
 

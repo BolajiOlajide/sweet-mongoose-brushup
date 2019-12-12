@@ -1,17 +1,17 @@
-const mongoose = require('mongoose');
+const { saveCharacter } = require('./services');
 
-const { Character } = require('./models');
+// save a characters
+const character1 = saveCharacter({
+  name: 'Ryu',
+  ultimate: 'Shinku Hadoken'
+});
 
+const character2 = saveCharacter({
+  name: 'Ken',
+  ultimate: 'Guren Enjinkyaku'
+})
 
-const url = 'mongodb://127.0.0.1:27017/something';
-
-const mongoOpts = {
-  useUnifiedTopology: true,
-  useNewUrlParser: true
-}
-mongoose.connect(url, mongoOpts);
-
-const db = mongoose.connection;
-
-db.once('open', _ => console.log('Database connected:', url));
-db.on('error', err => console.error('connection error:', err));
+Promise.all([character1, character2])
+  .then(console.log)
+  .catch(console.error)
+  .finally(() => process.exit(0))
