@@ -1,0 +1,11 @@
+{
+  "name": "sweet-mongoose-brushup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:BolajiOlajide/sweet-mongoose-brushup.git",
+  "author": "Bolaji Olajide",
+  "license": "MIT",
+  "dependencies": {
+    "mongoose": "^5.8.0"
+  }
+}
