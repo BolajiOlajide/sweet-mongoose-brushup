@@ -6,6 +6,6 @@
   "author": "Bolaji Olajide",
   "license": "MIT",
   "dependencies": {
-    "mongoose": "^5.8.0"
+    "mongoose": "^5.13.15"
   }
 }
